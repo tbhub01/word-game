@@ -19,7 +19,7 @@ let wordList = [
     { word: "japan", question: "What country does sushi originate from?" },
     { word: "avocado", question: "What is the primary ingredient in guacamole?" },
     { word: "sodium", question: "What chemical element has the symbol Na?" },
-    { word: "tomatoes", question: "Which fruit is the most popular and consumed worldwide?" },
+    { word: "tomato", question: "Which fruit is the most popular and consumed worldwide?" },
     { word: "van", question: "What type of car is the mystery machine in the Scooby-Doo series?" },
     { word: "eight", question: "How many legs does a spider usually have?" },
     

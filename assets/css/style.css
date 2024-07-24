@@ -4,12 +4,13 @@
 /*body of page*/
 
 body {
-    background: rgb(132, 204, 228);
+    background:rgb(15, 35, 150);
     align-items: center;
     display: flex;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 
@@ -17,13 +18,14 @@ body {
     background-color: lightgoldenrodyellow;
     box-sizing: border-box;
     border-radius: 10px;
-    width: 85%;
-    height: 55vh;
-    max-height: 430px;
-    max-width: 630px;
+    width: 65%;
+    height: 70vh;
+    max-height: 500px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    
 }
  
 
@@ -40,55 +42,135 @@ body {
     padding-left: 5px;
 }
 
-.content{
-    margin: 15px 15px 25px;
-}
-
-
 .quiz-board .control-area {
     margin: 25px 25px 35px;
 }
 
-.control-area{
-
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.control-area .text-inputs{
+.data input {
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-size: 35px;
+    font-weight: 500;
+    color: rgb(15, 35, 150);
+    text-align: center;
+}
+
+.control-area .clue {
+    margin: 20px 0 25px;
 
 }
 
 .clue {
-
+    flex-wrap: wrap;
 }
 
-.clue .question{
-
+.clue p{
+    font-size: 19px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    
+    
 }
 
-.clue .time{
-
+.question {
+    text-align: left;
+    margin-left: 60px;
+    flex-wrap: wrap;
+    
 }
 
 .btn-reset{
+    width: 20%;
+    font-size: 17;
+    padding: 10px 0;
+    cursor: pointer;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    
 
+    
 }
 
 .btn-answer{
-
-}
-
-.score-area{
-
+    width: 20%;
+    font-size: 17;
+    padding: 10px 0;
+    cursor: pointer;
+    background: rgb(15, 35, 150);
+    color: white;
+    border-radius: 5px;
+    
+    
 }
 
 .scores{
-
+    display: inline-block;
+    padding: 20px;
+    font-size: 21px;
 }
 
 #correct {
+    color: rgb(15, 35, 150);
+    font-weight: bold;
+}
+
+#wrong {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 414px) {
+    .data {
+        width: 100%;
+    }
+
+   .clue {
+        padding: 10% 0;
+        width: 100%;
+    }
+
+    .question-area span {
+        padding: 0;
+    }
+
+    .score-area {
+        width: 100%;
+    }
+
+    .scores {
+        margin: 0.5em auto;
+        display: block;
+        padding: 5px;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .quiz-board {
+        height: 70vh;
+    }
+
+    .data {
+        width: 75%;
+        margin: 10px auto;
+    }
+
+    .question-area {
+        padding: 10px 0;
+    }
 
 }
 
-#incorrect {
-    
-}

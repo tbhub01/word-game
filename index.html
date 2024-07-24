@@ -7,28 +7,43 @@
     <title>Knowledge Quiz. Guess the Word Game</title>
 </head>
 <body>
-  <div class="quiz-board">
-  <h1 class="heading">
-    <img class="logo" src="assets/images/thinking.png" alt="logo"> GUESS THE WORD GAME
-  </h1>
 
-  <div class="game-area">
-    <input type="text" class="typing-word" maxlength="1">
-    <div class="guesses"></div>
-    <div class="content">
+  <div class="quiz-board">
+      <h1 class="heading">
+        <img class="logo" src="assets/images/thinking.png" alt="logo"> GENERAL KNOWLEDGE QUIZ
+      </h1>
+
+    <div class="control-area"> 
+      <div class="text-iputs">
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+      </div>
+   
+    <div class="clue">
       <p class="question">Question:
         <span></span>
       </p>
+      <p class="time"><strong>Time Left:</strong>
+        <span><b>10</b></span>
+      </p>
     </div>
+  </div>
+  
     <button class = "btn-reset">Reset Quiz</button>
     <button class = "btn-answer">Check Answer</button>
-  </div>  
+    
   
 
-  <div class = "score-area">
-    <p class=" scores">Scores <span id = "score">0</span></p>
-
-  </div>
+    <div class = "score-area">
+      <p class="scores">Correct Answer <span id = "score">0</span></p>
+      <p class="scores">Wrong Answer <span id = "wrong">0</span></p>
+    
+    </div>
   </div>
   
       <script src="assets/js/script.js"></script>

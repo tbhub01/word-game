@@ -10,14 +10,13 @@ body {
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-    
-
 }
 
 
 .quiz-board {
     background-color: lightgoldenrodyellow;
     box-sizing: border-box;
+    border-radius: 10px;
     width: 85%;
     height: 55vh;
     max-height: 430px;
@@ -45,6 +44,51 @@ body {
     margin: 15px 15px 25px;
 }
 
-.typing-word {
 
+.quiz-board .control-area {
+    margin: 25px 25px 35px;
+}
+
+.control-area{
+
+}
+
+.control-area .text-inputs{
+
+}
+
+.clue {
+
+}
+
+.clue .question{
+
+}
+
+.clue .time{
+
+}
+
+.btn-reset{
+
+}
+
+.btn-answer{
+
+}
+
+.score-area{
+
+}
+
+.scores{
+
+}
+
+#correct {
+
+}
+
+#incorrect {
+    
 }

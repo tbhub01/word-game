@@ -3,6 +3,8 @@ let resetBtn = document.querySelector(".btn-reset");
 let submitBtn = document.querySelector(".btn-answer");
 let question = document.querySelector(".question span");
 let currentWord;
+let currentCount = 0;
+let wrongCount = 0;
 
 function randomWord() {
     // getting random word objects from the wordList questions 

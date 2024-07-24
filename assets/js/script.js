@@ -1,21 +1,21 @@
-let inputs = document.querySelector(".data"),
-resetBtn = document.querySelector(".btn-reset");
-submitBtn = document.querySelector(".btn-answer");
-question = document.querySelector(".question span"),
+let inputElements = document.querySelector(".data");
+let resetBtn = document.querySelector(".btn-reset");
+let submitBtn = document.querySelector(".btn-answer");
+let question = document.querySelector(".question span");
+let currentWord;
 
-/* getting random words from wordList*/
 function randomWord() {
-    let ranObj = wordList[Math.floor(Math.random() * wordList.length)];
-    //random word objects
-    let word = ranObj.word;
-    console.log(ranObj);
+    // getting random word objects from the wordList questions 
+  let ranObj = wordList[Math.floor(Math.random() * wordList.length)];
+  console.log(ranObj);
 
-    question.innerText = ranObj.question;
+  currentWord = ranObj;
+  question.innerText = ranObj.question;
 
-    let html ="";
-    for (let i = 0; i < word.length; i++) {
-        html += `<input type = "text" disabled>`;
-    }
-    inputs.innerHTML = html;
+  let inputHTML = Array.from({ length: ranObj.word.length }, () => `<input type="text" disabled>`).join("");
+  inputElements.innerHTML = inputHTML;
 }
-    resetBtn.addEventListener("click", randomWord);
+
+randomWord();
+resetBtn.addEventListener("click", randomWord);
+

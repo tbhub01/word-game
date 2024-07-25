@@ -48,7 +48,7 @@ body {
     border-radius: 5px;
     font-size: 35px;
     font-weight: 500;
-    color: rgb(15, 35, 150);
+    color: rgb(0, 3, 41);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -65,7 +65,8 @@ body {
 }
 
 .question {
-    color: rgb(47, 137, 255);   
+    color: black;
+    font-weight: bold;  
     font-size: 25px;
 }
 

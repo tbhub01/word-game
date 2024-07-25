@@ -61,7 +61,7 @@ function checkAnswer() {
         alert("Correct! Welldone :D");
         countingrightscore();
         clearInterval(timerInterval); 
-        randomWord(); 
+       
     } else {
         alert("Incorrect. The correct answer is " + correctAnswer);
         countingwrongscore();

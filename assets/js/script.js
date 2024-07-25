@@ -5,6 +5,8 @@ let question = document.querySelector(".question span");
 let currentWord;
 let currentCount = 0;
 let wrongCount = 0;
+let timeLeft = 20; // initial time left
+let timerInterval;
 
 function randomWord() {
     // getting random word objects from the wordList questions 
@@ -16,10 +18,39 @@ function randomWord() {
 
   let inputHTML = `<input type="text" id="answer" value="">`;
   inputElements.innerHTML = inputHTML;
+ 
+    //time left countdown
+    timerInterval = setInterval(() => {
+    timeLeft -= 1;
+    document.getElementById("time-left").innerText = timeLeft.toString();
+    if (timeLeft <= 0) {
+    alert("Time up. Game Over! Your final score is " + (currentCount - wrongCount));
+    location.reload(); // reload the page to restart game
 }
-    // event listner to reset game to any random quiz
-randomWord();
-resetBtn.addEventListener("click", randomWord);
+    }, 1000);
+ 
+}
+    // event listner to reset game to any random word and score count to zero
+    randomWord();
+    resetBtn.addEventListener("click", function() {
+    currentCount = 0;
+    wrongCount = 0;
+    document.getElementById("correct").innerText = "0";
+    document.getElementById("wrong").innerText = "0";
+    document.getElementById("time-left").innerText = "20";
+    randomWord();
+    
+});
+function resetGame() {
+    // Stop the timer
+    clearInterval(timerInterval);
+     timeLeft = 20;
+    currentWord = null;
+    currentCount = 0;
+    wrongCount = 0;
+    // Update the display to reflect the new game state
+    updateDisplay();
+  }
 
 function checkAnswer() {
     let userInput = document.querySelector("input").value.toLowerCase();
@@ -29,10 +60,19 @@ function checkAnswer() {
     if (userInput === correctAnswer) {
         alert("Correct! Welldone :D");
         countingrightscore();
+        clearInterval(timerInterval); 
+        timeLeft = 10; 
+        randomWord(); 
     } else {
         alert("Incorrect. The correct answer is " + correctAnswer);
         countingwrongscore();
+         if(timeLeft <= 0){
+            alert("Time is up. Game Over! Your final score is "+(currentCount-wrongCount));
+          location.reload(); // reload the page to restart game 
+        }
     }
+        // updates the time left on display
+        document.getElementById("time-left").innerText = timeLeft.toString();
 
     randomWord();
 }
@@ -41,11 +81,13 @@ function checkAnswer() {
         if (event.key === "Enter") {
             event.preventDefault();
             checkAnswer();
+            clearInterval(timerInterval); // stop timer when Enter key is clicked
        
     }
     });
     
-submitBtn.addEventListener("click", checkAnswer);
+    // event listener to check answer
+    submitBtn.addEventListener("click", checkAnswer);
 
     
 function countingwrongscore() {
@@ -57,3 +99,5 @@ function countingrightscore() {
     let oldScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++oldScore;
 }
+
+

@@ -5,12 +5,10 @@
 
 body {
     background:rgb(15, 35, 150);
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    min-height: 100vh;
-    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0;
 }
 
 
@@ -20,8 +18,6 @@ body {
     border-radius: 10px;
     width: 65%;
     height: 70vh;
-    max-height: 500px;
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
@@ -42,13 +38,13 @@ body {
     padding-left: 5px;
 }
 
-.quiz-board .control-area {
-    margin: 25px 25px 35px;
+.control-area{
+    margin-top: 25px;
 }
 
 .data{
     height: 50px;
-    margin: 1px;
+    margin-bottom: 10px;
     border-radius: 5px;
     font-size: 35px;
     font-weight: 500;
@@ -71,21 +67,17 @@ body {
 
 }
 
-.clue {
-    flex-wrap: wrap;
-}
 
 .clue p{
     font-size: 19px;
     margin-bottom: 10px;
-    flex-wrap: wrap;
-       
+    
 }
 
 .question {
     text-align: left;
     margin-left: 60px;
-    flex-wrap: wrap;
+   
     
 }
 
@@ -152,7 +144,7 @@ body {
     .scores {
         margin: 0.5em auto;
         display: block;
-        padding: 5px;
+        
     }
 
     .heading {

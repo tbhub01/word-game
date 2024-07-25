@@ -79,8 +79,7 @@ body {
     font-size: 19px;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    
-    
+       
 }
 
 .question {
@@ -98,9 +97,7 @@ body {
     background: red;
     color: white;
     border-radius: 5px;
-    
-
-    
+       
 }
 
 .btn-answer{
@@ -111,9 +108,12 @@ body {
     background: rgb(15, 35, 150);
     color: white;
     border-radius: 5px;
-    
-    
+        
 }
+
+.score-area {
+        padding: -20px;
+    }
 
 .scores{
     display: inline-block;

@@ -1,1 +1,2 @@
-# word-game
+## THE SMART HUMAN QUIZ
+

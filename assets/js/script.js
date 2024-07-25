@@ -2,23 +2,29 @@ let inputElements = document.querySelector(".data");
 let resetBtn = document.querySelector(".btn-reset");
 let submitBtn = document.querySelector(".btn-answer");
 let question = document.querySelector(".question span");
-let currentWord;
-let currentCount = 0;
-let wrongCount = 0;
-let timeLeft = 20; // initial time left
+
+let gameState = {
+    currentWord: null,
+    currentCount: 0,
+    wrongCount: 0,
+    timeLeft: 20,
+};
 let timerInterval;
 
 function randomWord() {
     // getting random word objects from the wordList questions 
-  let ranObj = wordList[Math.floor(Math.random() * wordList.length)];
-  console.log(ranObj);
+    gameState.currentWord = wordList[Math.floor(Math.random() * wordList.length)];
+    question.textContent = gameState.currentWord.question;
 
-  currentWord = ranObj;
-  question.textContent = ranObj.question;
+    inputElements.innerHTML = '<input type="text" id="answer" value="">';
 
-  let inputHTML = `<input type="text" id="answer" value="">`;
-  inputElements.innerHTML = inputHTML;
+    resetTimer();
+}
  
+  function resetTimer() {
+    clearInterval(timerInterval);
+    
+  }
     //time left countdown
     timerInterval = setInterval(() => {
     timeLeft -= 1;
@@ -26,10 +32,10 @@ function randomWord() {
     if (timeLeft <= 0) {
     alert("Time up. Game Over! Your final score is " + (currentCount - wrongCount));
     location.reload(); // reload the page to restart game
-}
+    }
     }, 1000);
  
-}
+
     // event listner to reset game to any random word and score count to zero
     randomWord();
     resetBtn.addEventListener("click", function() {
@@ -48,12 +54,11 @@ function resetGame() {
     currentWord = null;
     currentCount = 0;
     wrongCount = 0;
-    // Update the display to reflect the new game state
-    updateDisplay();
+       
   }
 
 function checkAnswer() {
-    let userInput = document.querySelector("input").value.toLowerCase();
+    let userInput = document.querySelector("input").value.trim().toLowerCase();
     let correctAnswer = currentWord.word.toLowerCase();
 
         // checking answer and called function to count scores

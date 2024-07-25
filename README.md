@@ -4,3 +4,5 @@ The Smart Human Quiz is a game to help adults, parents, teachers and anyone who 
 
 Frequent users of this game will have to answer challenging questions which will test your knowledge and skills in various categories. The game is designed for solo play as family and friends can take a turn. The goal is to answer as many questions correctly as possible.
 
+ 
+

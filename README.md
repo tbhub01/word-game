@@ -44,7 +44,7 @@ Frequent users of this game will have to answer challenging questions which will
    - I can confirm the colors and fonts and text chosen are all readable on computer and mobile view.
    - I can confirm a lighthouse in devtools have been done and the result are below:
 
-     LIGHTHOUS
+   ![The Smart Human Quiz](lighthouse.JPG)
      
    - I can confirm the project is responsive, looks good and all functions, screen size works using the devtools toolbar.
 

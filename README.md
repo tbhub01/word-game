@@ -64,7 +64,7 @@ Frequent users of this game will have to answer challenging questions which will
       - No error and one undefined variable returned on final submitted codes using the official JSHINT validator
 
    ### Unfixed Bugs
-      - The timer speed tends to be periodic but works as expected.
+   The timer speed tends to be periodic but works as expected.
 
    ## Deployment
    - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -72,7 +72,7 @@ Frequent users of this game will have to answer challenging questions which will
       -  From the source section drop-down menu, select the Master Branch
       -  Once the master branch has been selected, the page provided the link to the completed website.
 
-   The live link to the website is: 
+   The live link to the website is:  https://tbhub01.github.io/word-game/
   
 
   

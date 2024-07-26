@@ -22,6 +22,21 @@ let wordList = [
     { word: "tomato", question: "Most popular and consumed worldwide?" },
     { word: "van", question: "What car was mainly used in Scooby-Doo series?" },
     { word: "eight", question: "How many legs does a spider usually have?" },
+    { word: "blue", question: "What color is Sonic the Hedgehog?" },
+    { word: "australia", question: "Which country is Tasmania a part of?" },
+    { word: "march", question: "What month was Julius Caesar stabbed in?" },
+    { word: "china", question: "Which country invented tea?" },
+    { word: "four", question: "How many wisdom teeth does the average adult have?" },
+    { word: "ten", question: "How many legs does a crab have?" },
+    { word: "asia", question: "Which continent is the largest?" },
+    { word: "rabat", question: "What is the capital city of Morocco?" },
+    { word: "aries", question: "What is the first astrological sign in the zodiac?" },
+    { word: "greek", question: "Which mythology is Pandora's box from?" },
+    { word: "seven", question: "How many countries make up Central America?" },
+    { word: "circle", question: "What shape is a pie chart?" },
+    { word: "summer", question: "In which season is daytime the longest?" },
+    { word: "capulet", question: "In Romeo and Juliet, what family is Juliet from?" },
+    { word: "numerator", question: "What's the top number on a fraction called?" },
     
 
 
